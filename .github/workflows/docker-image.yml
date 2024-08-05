@@ -28,7 +28,7 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/udagram-api-feed:latest,${{ secrets.DOCKER_USERNAME }}/udagram-api-frontend:${{ github.sha }}
+        tags: ${{ secrets.DOCKER_USERNAME }}/udagram-api-feed:latest,${{ secrets.DOCKER_USERNAME }}/udagram-frontend:${{ github.sha }}
 
     - name: Log out from Docker Hub
       run: docker logout
